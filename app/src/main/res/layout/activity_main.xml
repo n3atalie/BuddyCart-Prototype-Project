@@ -19,8 +19,8 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="223dp"
-        android:layout_height="117dp"
+        android:layout_width="170dp"
+        android:layout_height="83dp"
         android:layout_marginStart="350dp"
         android:layout_marginTop="152dp"
         android:layout_marginEnd="70dp"
@@ -28,7 +28,9 @@
         android:text="testing!"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
