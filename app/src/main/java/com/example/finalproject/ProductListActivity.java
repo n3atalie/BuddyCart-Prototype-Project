@@ -1,5 +1,6 @@
 package com.example.finalproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -92,9 +93,15 @@ public class ProductListActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) { }
         });
+
+        ImageButton btnCart = findViewById(R.id.btnCart);
+        btnCart.setOnClickListener(v -> {
+            Intent intent = new Intent(ProductListActivity.this, CartActivity.class);
+            startActivity(intent);
+        });
+
     }
 
-    // 検索機能：名前に含まれる商品を表示
     private void filterProducts(String query) {
         filteredList.clear();
         for (Product product : productList) {

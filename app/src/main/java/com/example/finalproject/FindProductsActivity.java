@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.ArrayList;
 import android.widget.ImageButton;
 import android.view.View;
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,6 +21,13 @@ public class FindProductsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_products);
+
+        ImageButton btnCart = findViewById(R.id.btnCart);
+        btnCart.setOnClickListener(v -> {
+            Intent intent = new Intent(FindProductsActivity.this, CartActivity.class);
+            startActivity(intent);
+        });
+
 
         ImageButton btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -42,7 +50,6 @@ public class FindProductsActivity extends AppCompatActivity {
         categoryRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         categoryRecyclerView.setAdapter(adapter);
     }
-
 }
 
 

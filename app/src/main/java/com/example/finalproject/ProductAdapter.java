@@ -55,7 +55,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         holder.productStock.setText("In stock: " + product.getStock());
 
         holder.btnAddToCart.setOnClickListener(v -> {
-            // カート機能は後で実装、今は仮の動作
+            CartManager.getInstance().addToCart(product);
             Toast.makeText(context, product.getName() + " added to cart", Toast.LENGTH_SHORT).show();
         });
     }
