@@ -16,7 +16,7 @@
         android:layout_marginBottom="12dp">
 
         <ImageButton
-            android:id="@+id/btnBackProduct"
+            android:id="@+id/btnBackCheckout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"

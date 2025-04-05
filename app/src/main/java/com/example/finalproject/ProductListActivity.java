@@ -32,7 +32,7 @@ public class ProductListActivity extends AppCompatActivity {
         categoryTitle = findViewById(R.id.categoryTitle);
         productRecyclerView = findViewById(R.id.productRecyclerView);
         searchInput = findViewById(R.id.editTextProductSearch);
-        ImageButton btnBack = findViewById(R.id.btnBackProduct);
+        ImageButton btnBack = findViewById(R.id.btnBackCheckout);
 
         // 戻るボタン
         btnBack.setOnClickListener(v -> finish());
@@ -44,31 +44,31 @@ public class ProductListActivity extends AppCompatActivity {
         // 商品一覧（全体）
         productList = new ArrayList<>();
         if (category.equals("Fresh Fruits & Vegetable")) {
-            productList.add(new Product("Apple", R.drawable.apple, 1.5, 10));
-            productList.add(new Product("Banana", R.drawable.banana, 0.9, 15));
+            productList.add(new Product("Apple", R.drawable.apple, 1.50, 10));
+            productList.add(new Product("Banana", R.drawable.banana, 0.90, 15));
         } else if (category.equals("Dairy & Eggs")) {
-            productList.add(new Product("Milk", R.drawable.milk, 2.8, 8));
-            productList.add(new Product("Eggs", R.drawable.egg, 3.0, 12));
+            productList.add(new Product("Milk", R.drawable.milk, 2.80, 8));
+            productList.add(new Product("Eggs", R.drawable.egg, 3.00, 12));
         } else if (category.equals("Cooking Oil & Ghee")) {
-            productList.add(new Product("Sunfoil", R.drawable.sunfoil, 2.8, 8));
-            productList.add(new Product("Vegetable oil", R.drawable.vegetableoil, 3.0, 12));
+            productList.add(new Product("Sunfoil", R.drawable.sunfoil, 2.80, 8));
+            productList.add(new Product("Vegetable oil", R.drawable.vegetableoil, 3.00, 12));
         } else if (category.equals("Bakery & Snacks")) {
-            productList.add(new Product("Muffin", R.drawable.muffin, 2.8, 8));
-            productList.add(new Product("French bread", R.drawable.frenchbread, 3.0, 12));
+            productList.add(new Product("Muffin", R.drawable.muffin, 2.80, 8));
+            productList.add(new Product("French bread", R.drawable.frenchbread, 3.00, 12));
         } else if (category.equals("Beverages")) {
-            productList.add(new Product("Pepsi", R.drawable.pepsi, 2.8, 8));
-            productList.add(new Product("Coca Cola", R.drawable.cola, 3.0, 12));
-            productList.add(new Product("Diet Cola", R.drawable.dietcola, 3.0, 12));
-            productList.add(new Product("Pepsi", R.drawable.pepsi, 2.8, 8));
-            productList.add(new Product("Coca Cola", R.drawable.cola, 3.0, 12));
-            productList.add(new Product("Diet Cola", R.drawable.dietcola, 3.0, 12));
-            productList.add(new Product("Pepsi", R.drawable.pepsi, 2.8, 8));
-            productList.add(new Product("Coca Cola", R.drawable.cola, 3.0, 12));
-            productList.add(new Product("Diet Cola", R.drawable.dietcola, 3.0, 12));
-            productList.add(new Product("Sprite", R.drawable.sprite, 2.8, 8));
+            productList.add(new Product("Pepsi", R.drawable.pepsi, 2.80, 8));
+            productList.add(new Product("Coca Cola", R.drawable.cola, 3.00, 12));
+            productList.add(new Product("Diet Cola", R.drawable.dietcola, 3.00, 12));
+            productList.add(new Product("Pepsi", R.drawable.pepsi, 2.80, 8));
+            productList.add(new Product("Coca Cola", R.drawable.cola, 3.00, 12));
+            productList.add(new Product("Diet Cola", R.drawable.dietcola, 3.00, 12));
+            productList.add(new Product("Pepsi", R.drawable.pepsi, 2.80, 8));
+            productList.add(new Product("Coca Cola", R.drawable.cola, 3.00, 12));
+            productList.add(new Product("Diet Cola", R.drawable.dietcola, 3.00, 12));
+            productList.add(new Product("Sprite", R.drawable.sprite, 2.80, 8));
         } else if (category.equals("Meat & Fish")) {
-            productList.add(new Product("Beef", R.drawable.beef, 2.8, 8));
-            productList.add(new Product("Pork", R.drawable.pork, 3.0, 12));
+            productList.add(new Product("Beef", R.drawable.beef, 2.80, 8));
+            productList.add(new Product("Pork", R.drawable.pork, 3.00, 12));
         }
 
         // 検索用のフィルターリスト（初期値：すべて）
