@@ -1,33 +1,37 @@
 package com.example.finalproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import java.util.List;
 import java.util.ArrayList;
+
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.view.View;
-import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 
 public class FindProductsActivity extends AppCompatActivity {
 
     RecyclerView categoryRecyclerView;
     List<Category> categoryList;
+    Button btnCart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_products);
 
-        ImageButton btnBack = findViewById(R.id.btnBack);
+        ImageButton btnBack = findViewById(R.id.linearlayout);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish(); // Back to top page
             }
         });
+
+        btnCart = findViewById(R.id.btnCart);
 
         categoryRecyclerView = findViewById(R.id.categoryRecyclerView);
         categoryList = new ArrayList<>();
@@ -41,6 +45,11 @@ public class FindProductsActivity extends AppCompatActivity {
         CategoryAdapter adapter = new CategoryAdapter(this, categoryList);
         categoryRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         categoryRecyclerView.setAdapter(adapter);
+
+        btnCart.setOnClickListener(v -> {
+            Intent intent = new Intent(FindProductsActivity.this, Checkout.class);
+            startActivity(intent);
+        });
     }
 
 }

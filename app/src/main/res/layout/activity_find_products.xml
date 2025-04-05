@@ -7,7 +7,7 @@
     android:padding="16dp"
     tools:context=".FindProductsActivity">
 
-    <!-- ←戻る ＋ タイトル -->
+    <!-- Back Button + Title -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,15 +16,15 @@
         android:layout_marginBottom="12dp">
 
         <ImageButton
-            android:id="@+id/btnBack"
+            android:id="@+id/linearlayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:src="@android:drawable/ic_media_previous"
-            android:contentDescription="Back" />
+            android:background="#00000000"
+            android:contentDescription="Back"
+            android:src="@android:drawable/ic_media_previous" />
 
         <TextView
-            android:id="@+id/textViewTitle"
+            android:id="@+id/checkoutSummaryTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Find Products"
@@ -34,7 +34,7 @@
             android:layout_marginStart="8dp" />
     </LinearLayout>
 
-    <!-- 検索バー -->
+    <!-- Search Bar -->
     <EditText
         android:id="@+id/editTextSearch"
         android:layout_width="match_parent"
@@ -45,12 +45,22 @@
         android:background="@android:drawable/edit_text"
         android:layout_marginBottom="16dp" />
 
-    <!-- カテゴリ表示の RecyclerView -->
+    <!-- RecyclerView for Categories -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/categoryRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="446dp"
         android:layout_weight="1"
         android:scrollbars="vertical" />
 
+    <!-- Cart Button -->
+    <Button
+        android:id="@+id/btnCart"
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="#000000"
+        android:text="Cart"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>

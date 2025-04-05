@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid android:color="#FFE5D0"/> <!-- light orange tint -->
+    <corners android:radius="12dp"/>
+    <stroke
+        android:width="2dp"
+        android:color="#FF4500" /> <!-- matches your orange-red button -->
+
+</shape>

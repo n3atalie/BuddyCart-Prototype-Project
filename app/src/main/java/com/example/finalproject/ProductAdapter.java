@@ -50,12 +50,13 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     public void onBindViewHolder(@NonNull ProductAdapter.ViewHolder holder, int position) {
         Product product = productList.get(position);
         holder.productName.setText(product.getName());
-        holder.productImage.setImageResource(product.getImageResId());
+        holder.productImage.setImageResource(product.getImageResource());
         holder.productPrice.setText("$" + product.getPrice());
         holder.productStock.setText("In stock: " + product.getStock());
 
         holder.btnAddToCart.setOnClickListener(v -> {
             // カート機能は後で実装、今は仮の動作
+            CartManager.getInstance().addToCart(product);
             Toast.makeText(context, product.getName() + " added to cart", Toast.LENGTH_SHORT).show();
         });
     }

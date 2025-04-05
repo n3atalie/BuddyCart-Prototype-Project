@@ -12,28 +12,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalProject"
         tools:targetApi="31">
-        <activity
-            android:name=".ContactSubmission"
-            android:exported="false" />
-        <activity
-            android:name=".ContactUs"
-            android:exported="false" />
-        <activity
-            android:name=".FindProductsActivity"
-            android:exported="false" />
+
+        <activity android:name=".PaymentInformation" android:exported="false" />
+        <activity android:name=".CheckoutSummary" android:exported="false" />
+        <activity android:name=".ContactSubmission" android:exported="false" />
+        <activity android:name=".ContactUs" android:exported="false" />
+        <activity android:name=".FindProductsActivity" android:exported="false" />
         <activity android:name=".ProductListActivity" />
-        <activity
-            android:name=".Checkout"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+        <activity android:name=".Checkout" android:exported="false" />
+
+        <!-- ✅ Add these two -->
+        <activity android:name=".ManagePaymentsActivity" android:exported="false" />
+        <activity android:name=".PaymentMethodActivity" android:exported="false" />
+
+        <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+    </application>
 </manifest>

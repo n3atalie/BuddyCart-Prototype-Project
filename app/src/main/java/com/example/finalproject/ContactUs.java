@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -15,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class ContactUs extends AppCompatActivity {
 
-    Button backToMain, btnSubmit;
+    Button btnSubmit;
     EditText contactName, contactEmail, contactMessage;
 
 
@@ -30,23 +31,13 @@ public class ContactUs extends AppCompatActivity {
             return insets;
         });
 
-
-        backToMain = findViewById(R.id.backToMain);
+        ImageButton backToMain = findViewById(R.id.linearlayout);
         btnSubmit= findViewById(R.id.btnSubmit);
         contactEmail = findViewById(R.id.contactEmail);
         contactName = findViewById(R.id.contactName);
         contactMessage = findViewById(R.id.contactMessage);
 
-
-
-
-        backToMain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ContactUs.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
+        backToMain.setOnClickListener(v -> finish());
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
