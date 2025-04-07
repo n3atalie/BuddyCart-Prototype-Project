@@ -56,6 +56,20 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
 
         holder.btnAddToCart.setOnClickListener(v -> {
             CartManager.getInstance().addToCart(product);
+
+            boolean found = false;
+            for (CartItem item : CartData.cartItems) {
+                if (item.getProduct().getName().equals(product.getName())) {
+                    item.increaseQuantity();
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                CartItem item = new CartItem(product, 1);
+                CartData.cartItems.add(item);
+            }
+
             Toast.makeText(context, product.getName() + " added to cart", Toast.LENGTH_SHORT).show();
         });
     }

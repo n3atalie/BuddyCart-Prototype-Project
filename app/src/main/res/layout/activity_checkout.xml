@@ -1,18 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
     android:padding="24dp">
 
-    <TextView
-        android:id="@+id/checkoutMessage"
+    <ImageButton
+        android:id="@+id/btnBackToCart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Your order has been placed!"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="#4CAF50"
-        android:gravity="center" />
+        android:src="@android:drawable/ic_media_previous"
+        android:background="@android:color/transparent"
+        android:contentDescription="Back"
+        android:layout_marginBottom="12dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/checkoutMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Your order summary here"
+            android:textSize="25sp"
+            android:textColor="#000000" />
+    </ScrollView>
+    <Button
+        android:id="@+id/btnProcessOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Process Order"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
 </LinearLayout>
+
